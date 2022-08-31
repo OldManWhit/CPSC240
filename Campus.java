@@ -6,19 +6,31 @@ public class Campus {
     private static String campusState = null;
     
 
-    // parameterized constructor
+    /**
+     * parameterized constructor
+     * @param campusName
+     */
     public Campus(String campusName){
         this.campusName = campusName;
     }
-    // Default constructor    
+
+    /**
+     * Default constructor for Campus()
+     */
     public Campus() {
 
     }
 
+    /**
+     * addPlaces() to ArrayList campusPlace, passing String place
+     * @param place passed in to add to campusPlace ArrayList
+     * @return campusPlace
+     */
     public ArrayList<String> addPlaces(String place) {
         campusPlace.add(place);
         return campusPlace;
     }
+
     /**
      * Getter for campusPlace
      * @return campusPlace
@@ -26,6 +38,7 @@ public class Campus {
     public ArrayList<String> getCampusPlace() {
         return campusPlace;
     }
+
     /**
      * Getter for campusName
      * @return campusName
@@ -33,41 +46,46 @@ public class Campus {
     public String getCampusName() {
         return campusName;
     }
+
     /**
      * Getter for campusState
      * @return campusState
      */
     public String getCampusState() {
-        campusState = "Virginia";
         return campusState;
     }
+
     /**
-     * Setter for campusPlace ArrayList
-     * @param place sets the next place
+     * Setter for campusPlace
+     * @param place sets the Campus Place of the object.
      */
     public void setCampusPlace(ArrayList<String> place) {
         campusPlace = place;
     }
+
     /**
      * Setter for campusName
-     * @param name
+     * @param name sets the Campus Name of the object.
      */
     public void setCampusName(String name){
         campusName = name;
     }
+
     /**
      * Setter for campusState
-     * @param campusState passes
+     * @param campusState sets the State, currently static across all objects.
      */
-    public void setCampusState() {
-    //    Campus.campusState = campusState;
+    public static void setCampusState(String state) {
+        campusState = state;
     }
+
     /**
-     * toString() method to return the object created
+     * toString() method to return the object created and its fields
+     * @return a sentence that includes the name, place(s), and state of the object.
      */
     public String toString() {
         
-        return "The Campus name is " + campusName + " and the place to meet is at " + campusPlace + ", in the state of" + campusState + ".";
+        return "The Campus name is " + campusName + ".";
 
     }
 }
