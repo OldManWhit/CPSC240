@@ -1,28 +1,31 @@
-import java.util.ArrayList;
-
 public class CampusTester {
 
-     // main
-     public static void main(String[] args) {
-        Campus UMW = new Campus("UMW");
+     
+     /** main
+     * @param args
+     */
+    public static void main(String[] args) {
+
+        // This sets the static CampusState
+        Campus.setCampusState("Virginia");
+
+        // 2.A First Campus object named VSU should be created using the parametrized constructor. Use getters to print this Campus object created.
         Campus VSU = new Campus("VSU");
+        System.out.println(VSU.getCampusName());
 
-        UMW.addPlaces("Ball Circle");
+        // 2.B Second Campus object named UMW should be created using the parametrized constructor. Use the toString() method to print this object created.
+        Campus UMW = new Campus("UMW");
+        System.out.println(UMW.toString());
 
-        ArrayList<String> whatever = new ArrayList<>();
-        whatever = UMW.campusPlace;
-
-        UMW.setCampusName("UMW");
-        campusPlace.add("green");
-
-        System.out.println(UMW.getCampusName());
-        System.out.println(UMW.getCampusPlace());
+        // 2.C Print the residing state of both universities using the static method getState(). Remember, this has to be called/invoked using the class Campus.
+        System.out.println(VSU.getCampusState());
         System.out.println(UMW.getCampusState());
 
-        Campus VSU = new Campus();
-        Campus.setCampusName("VSU");
-        campusPlace.add("blue");
-        System.out.println(VSU.getCampusName());
+        /* 2.D Add two places to UMW campus object (Ball Circle and James Farmer Hall) using 
+        *  addPlaces() method. Finally, print the places you just added from the arrayList returned. */
+        UMW.addPlaces("Ball Circle");
+        UMW.addPlaces("James Farmers Hall");
+        System.out.println(UMW.getCampusPlace());
 
     }
 }
