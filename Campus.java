@@ -1,6 +1,17 @@
+package com.mycompany.campusapp;
 import java.util.ArrayList;
 
+/**
+ * “I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work.”
+ * CPSC 240 Section 03
+ * @version 1.0
+ * @author Chris Whitworth
+ */
 public class Campus {
+
+    /**
+     * Initiating fields
+     */
     private String campusName = null;
     public ArrayList<String> campusPlace = new ArrayList<String>();
     private static String campusState = null;
@@ -73,7 +84,7 @@ public class Campus {
 
     /**
      * Setter for campusState
-     * @param campusState sets the State, currently static across all objects.
+     * @param state
      */
     public static void setCampusState(String state) {
         campusState = state;
