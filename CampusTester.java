@@ -1,3 +1,11 @@
+package com.mycompany.campusapp;
+
+/**
+ * “I hereby declare upon my word of honor that I have neither given nor received unauthorized help on this work.”
+ * CPSC 240 Section 03
+ * @version 1.0
+ * @author Chris Whitworth
+ */
 public class CampusTester {
 
      
